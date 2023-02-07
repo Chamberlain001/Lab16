@@ -17,3 +17,17 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a, int &b, int &c, int &d){
+	int sort[4] = {a, b, c, d}, temp = 0;
+	for(int i = 0; i < 10; i++){
+		int x = rand() % 4, y = rand() % 4;
+		temp = sort[x];
+		sort[x] = sort[y];
+		sort[y] = temp;
+	}
+	a = sort[0];
+	b = sort[1];
+	c = sort[2];
+	d = sort[3];
+}
